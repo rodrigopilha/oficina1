@@ -47,15 +47,23 @@ use App\classes\pegardados;
 
 $pd = new pegardados();
   $dados = $pd->pegardados();
-   foreach($dados as $key => $values){
+  echo "<tr>";
+  foreach($dados as $dado){
+   foreach($dado as $key => $values){
      if($key != "id"){
         echo "<th>".$values."</th>";
      }
-   }
-  ?>
-  <th><a href="" class="btn-success btn">Editar</a></th>
+    }
+     ?>
+  
+  
+  <th><a href="cad.php?edt=<?php echo $dado['id']; ?>" class="btn-success btn">Editar</a></th>
   <th><a href="listapecas.php?id=<?php echo $values; ?>" class="btn-danger btn">Excluir</a></th>
-     </table>
+   <?php
+    echo "</tr>";
+     } 
+  ?> 
+  </table>
   </div>
 
  

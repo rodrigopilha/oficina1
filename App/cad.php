@@ -15,37 +15,53 @@
   <form  method="POST" class="row g-3 m-5 " >
         <div class="col-md-4 position-relative">
            
-            <input type="text" class="form-control" placeholder="Peça" name="peca" >
+            <input type="text" class="form-control" placeholder="Peça" name="peca" value="<?php if (isset($dado)) {
+                                                                                          echo $dado['modelo'];
+                                                                                        } ?>">
             
         </div>
         <div class="col-md-4 position-relative">
            
-            <input type="text" class="form-control" placeholder=" Marca" name="marca">
+            <input type="text" class="form-control" placeholder=" Marca" name="marca" value="<?php if (isset($dado)) {
+                                                                                          echo $dado['modelo'];
+                                                                                        } ?>">
             
         </div>
         <div class="col-md-4 position-relative">
                     
-            <input type="text" class="form-control" placeholder="Veiculo" name="veiculo">
+            <input type="text" class="form-control" placeholder="Veiculo" name="veiculo" value="<?php if (isset($dado)) {
+                                                                                          echo $dado['modelo'];
+                                                                                        } ?>">
            
             </div>
         </div>
         <div class="col-md-4 position-relative">
            
-            <input type="text" class="form-control" placeholder="Ano" name="ano">
+            <input type="text" class="form-control" placeholder="Ano" name="ano" value="<?php if (isset($dado)) {
+                                                                                          echo $dado['modelo'];
+                                                                                        } ?>">
             
         </div>
         <div class="col-md-6 position-relative">
 
-        <input type="text" class="form-control" placeholder="Modelo" name="modelo">
+        <input type="text" class="form-control" placeholder="Modelo" name="modelo" value="<?php if (isset($dado)) {
+                                                                                          echo $dado['modelo'];
+                                                                                        } ?>">
 
         </div>
         <div class="col-md-3 position-relative">
 
-        <input type="text" class="form-control" placeholder="Quantidade" name="qtd">
+        <input type="text" class="form-control" placeholder="Quantidade"  name="qtd" value="<?php if (isset($dado)) {
+                                                                                          echo $dado['modelo'];
+                                                                                        } ?>">
 
         </div>
         <div class="col-12 ">
-            <button class="btn btn-primary" type="submit">Cadastrar</button>
+            <button class="btn btn-primary" type="submit" valur="<?php if (isset($dado)) {
+            echo "Atualizar";
+            } else {
+            echo "Cadastrar";
+        } ?>" >Cadastrar</button>
         </div>
 </form>
     

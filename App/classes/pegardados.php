@@ -7,7 +7,7 @@ class pegardados{
         $sql = "SELECT * FROM pecas ";
         $stmt = conexao::getcon()->prepare($sql);
         $stmt->execute();
-        $dados = $stmt->fetch(\PDO::FETCH_ASSOC);
+        $dados = $stmt->fetchAll(\PDO::FETCH_ASSOC);
          return $dados;
     }
 }
